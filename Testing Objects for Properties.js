@@ -7,10 +7,13 @@ var myObj = {
 };
 
 function checkObj(checkProp) {
-
+  if (myObj.hasOwnProperty(checkProp)) {
   // Your Code Here
-
-  return "Change Me!";
+  return myObj.checkProp;
+  }
+  else {
+  return "Not Found";
+  }
 }
 
 // Test your code by modifying these values
