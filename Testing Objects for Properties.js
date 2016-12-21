@@ -8,8 +8,8 @@ var myObj = {
 
 function checkObj(checkProp) {
   if (myObj.hasOwnProperty(checkProp)) {
-  // Your Code Here
-  return myObj.checkProp;
+ result = myObj[checkProp];
+  return result;
   }
   else {
   return "Not Found";
