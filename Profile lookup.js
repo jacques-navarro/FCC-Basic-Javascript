@@ -31,6 +31,14 @@ var contacts = [
 function lookUpProfile(firstName, prop){
 // Only change code below this line
 
+//use for loop to iterate through firstName properties of contacts object
+// return value of property if variables passed in function, first name and property
+// match contact
+  for (var i =0; i < contacts.length; i++) {
+if (firstName == contacts[i].firstName && contacts[i].hasOwnProperty(prop)) {
+  return contacts[i][prop];
+}
+}
 // Only change code above this line
 }
 
