@@ -40,15 +40,21 @@ function lookUpProfile(firstName, prop){
       return contacts[i][prop];
     }
 }
-// insert anoter for loop for second requirement
-   for (var j = 0; j < contacts.length; j++) {
+
+// insert 2nd for loop to check if contact matches && property doesn't
+  for (var k = 0; k < contacts.length; k++) {
+     if (firstName == contacts[k].firstName && prop != contacts[k].hasOwnProperty(prop)) {
+        return "No such property";
+   }
+ }
+// // insert third for loop to check if contact doesn't match && property does
+    for (var j = 0; j < contacts.length; j++) {
      if (firstName != contacts[j].firstName) {
         return "No such contact";
    }
  }
-
 // Only change code above this line
 }
 
 // Change these values to test your function
-lookUpProfile("bob", "likes");
+lookUpProfile("Bob", "likes");
