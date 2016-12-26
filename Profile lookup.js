@@ -34,13 +34,21 @@ function lookUpProfile(firstName, prop){
 //use for loop to iterate through firstName properties of contacts object
 // return value of property if variables passed in function, first name and property
 // match contact
+
   for (var i =0; i < contacts.length; i++) {
-if (firstName == contacts[i].firstName && contacts[i].hasOwnProperty(prop)) {
-  return contacts[i][prop];
+    if (firstName == contacts[i].firstName && contacts[i].hasOwnProperty(prop)) {
+      return contacts[i][prop];
+    }
 }
-}
+// insert anoter for loop for second requirement
+   for (var j = 0; j < contacts.length; j++) {
+     if (firstName != contacts[j].firstName) {
+        return "No such contact";
+   }
+ }
+
 // Only change code above this line
 }
 
 // Change these values to test your function
-lookUpProfile("Akira", "likes");
+lookUpProfile("bob", "likes");
